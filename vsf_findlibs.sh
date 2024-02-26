@@ -14,6 +14,7 @@ fi
 # crypt library.
 if find_func pam_start sysdeputil.o; then
   locate_library /lib/libpam.so.0 && echo "/lib/libpam.so.0";
+  locate_library /lib64/libpam.so.0 && echo "/lib64/libpam.so.0";
   locate_library /usr/lib/libpam.so && echo "-lpam";
   locate_library /usr/lib64/libpam.so && echo "-lpam";
   locate_library /lib/x86_64-linux-gnu/libpam.so.0 && echo "-lpam";
